@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>PUBLIC_KEY</key>
+        <string>${MARVEL_PUBLIC_KEY}</string>
+        <key>PRIVATE_KEY</key>
+        <string>${MARVEL_PRIVATE_KEY}</string>
+        <key>API_KEY</key>
+        <string>${FIREBASE_API_KEY}</string>
+        <key>GCM_SENDER_ID</key>
+        <string>${FIREBASE_GCM_SENDER_ID}</string>
+        <key>PROJECT_ID</key>
+        <string>${FIREBASE_PROJECT_ID}</string>
+        <key>STORAGE_BUCKET</key>
+        <string>${FIREBASE_STORAGE_BUCKET}</string>
+        <key>GOOGLE_APP_ID</key>
+        <string>${FIREBASE_GOOGLE_APP_ID}</string>
+    </dict>
+</plist>
