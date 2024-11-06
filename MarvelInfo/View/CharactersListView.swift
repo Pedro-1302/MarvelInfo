@@ -14,6 +14,7 @@ struct CharactersListView: View {
                 Text("Characters View")
             }
             .navigationTitle("Characters")
+            .background(ColorScheme.backgroundColor)
         }
     }
 }

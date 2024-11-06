@@ -14,6 +14,7 @@ struct ConfigView: View {
                 Text("Config View")
             }
             .navigationTitle("Configuration")
+            .background(ColorScheme.backgroundColor)
         }
     }
 }

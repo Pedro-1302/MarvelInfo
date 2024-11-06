@@ -25,6 +25,7 @@ struct RootView: View {
                     Label("Configurations", systemImage: "gearshape.fill")
                 }
         }
+        .tint(ColorScheme.accent)
     }
 }
 

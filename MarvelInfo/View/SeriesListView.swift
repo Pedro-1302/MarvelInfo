@@ -14,6 +14,7 @@ struct SeriesListView: View {
                 Text("Series View")
             }
             .navigationTitle("Series")
+            .background(ColorScheme.backgroundColor)
         }
     }
 }
