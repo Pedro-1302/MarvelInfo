@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CharactersListView: View {
     @StateObject private var viewModel = CharactersListViewModel()
+    @EnvironmentObject var networkManager: NetworkManager
     
     var body: some View {
         NavigationStack {
@@ -25,6 +26,12 @@ struct CharactersListView: View {
             .navigationTitle("Characters")
             .background(ColorScheme.backgroundColor)
             .searchable(text: $viewModel.searchableText, prompt: "Search a Character")
+            .onAppear {
+                Task {
+                    let result = try await networkManager.getCharacters(page: 1)
+                    print(result)
+                }
+            }
         }
     }
 }

@@ -33,10 +33,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct MarvelInfoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var networkManager = NetworkManager()
     
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(networkManager)
                 .preferredColorScheme(.dark)
         }
     }
