@@ -10,4 +10,5 @@ import Foundation
 @MainActor
 final class CharactersListViewModel: ObservableObject {
     @Published var searchableText: String = ""
+    @Published var characters: [Character] = [] 
 }

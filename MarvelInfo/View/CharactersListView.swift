@@ -13,8 +13,8 @@ struct CharactersListView: View {
     
     var body: some View {
         NavigationStack {
-            List(0..<10) { _ in
-                CharacterCell()
+            List(viewModel.characters) { character in
+                CharacterCell(character: character)
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     .padding(.vertical, 4)
                     .padding(.horizontal, 10)
@@ -29,7 +29,7 @@ struct CharactersListView: View {
             .onAppear {
                 Task {
                     let result = try await networkManager.getCharacters(page: 1)
-                    print(result)
+                    viewModel.characters = result
                 }
             }
         }
@@ -38,4 +38,6 @@ struct CharactersListView: View {
 
 #Preview {
     CharactersListView()
+        .environmentObject(CharactersListViewModel())
+        .environmentObject(NetworkManager())
 }

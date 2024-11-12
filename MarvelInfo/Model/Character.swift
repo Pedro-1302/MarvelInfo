@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character: Codable, MarvelEntity {
+struct Character: Codable, MarvelEntity, Identifiable {
     let id = UUID()
     let name: String
     let description: String?
@@ -17,4 +17,7 @@ struct Character: Codable, MarvelEntity {
     let urls: [URLElement]?
     
     var nameOrTitle: String { return name }
+    
+    static let sampleCharacter: Character = Character(name: "Spider Man", description: "Spider Man is a hero from Marvel.", thumbnail: Thumbnail(path: "", thumbnailExtension: ""), resourceURI: "", comics: ResourceList(available: 0, items: []), urls: [URLElement(type: "", url: "")])
 }
+
